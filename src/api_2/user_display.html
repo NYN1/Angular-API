@@ -1,0 +1,31 @@
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+    <input type = "text" name = "name" placeholder = "name" ngModel>
+    <br/>
+    <input type = "text" name = "password" placeholder = "passwd" ngModel>
+    <br/>
+    <input type = "text" name = "email" placeholder = "Email Id" ngModel>
+    <br/>
+    <input type = "text" name = "frame_size" placeholder = "Frame Size" ngModel>
+    <br/>
+    <input type = "text" name = "age" placeholder = "Age" ngModel>
+    <br/>
+    <input type = "text" name = "faverateFrames" placeholder = "Faverate Frame" ngModel>
+    <br/>
+    <input type = "text" name = "orderHistory" placeholder = "Order History" ngModel>
+    <br/>
+    <input type = "submit" value = "submit">
+ </form>
+
+ 
+ <h1>Hello</h1>
+
+ <div *ngIf = "user_test !== undefined">
+    <h2>Name entered is : {{user_test?.name}}</h2>
+    <h2>Password entered is : {{user_test?.password}}</h2>
+    <h2>Frame Size entered is : {{user_test?.frame_size}}</h2>
+    <h2>Email ID entered is : {{user_test?.email}}</h2>
+    <h2>Faverate Frame entered is : {{user_test?.faverateFrames}}</h2>
+    <h2>Order History entered is : {{user_test?.orderHistory}}</h2>
+ </div>
+
+ 
