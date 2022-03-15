@@ -77,7 +77,7 @@ export class ProductListComponent //implements OnInit
           rrpCurrency: ele.rrpCurrency,
           frameColourDescription: ele.frameColourDescription,
           frameSize: ele.frameSize,
-          base64Emb: this.domSanitizer.bypassSecurityTrustHtml(ele.base64Emb) as string,
+          base64Emb: this.domSanitizer.bypassSecurityTrustHtml(`data:image/png;base64, ${ele.base64Emb}`) as string,
         }
         this.All_products.push(frame_ins)
       }
