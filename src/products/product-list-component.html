@@ -1,16 +1,9 @@
 <div class = 'card'>
+    <div *ngFor= "let line of All_products" >
+        <h2>{{line.frameColor}}</h2>
+        <h2>{{line.uniqueName}}</h2>
+    </div>
     <div class = 'data'>
-
-        <div class = "col-md-4">
-            <form #framedetails = "ngForm" (ngSubmit) = "onClickSubmit(framedetails.value)" >
-                <input type = "text" name = "frame_name" placeholder = "Frame Name" ngModel>
-                <input type="submit">
-            </form>
-        </div>
-        
-        
-        <h1>{{frameName}}</h1>
-
         <div class="table-responsive">
             <div *ngFor= "let line of products_h" >
                 <h2>Name is {{line.uniqueName}}</h2>
@@ -18,10 +11,14 @@
                 <h2>Frame Colour is {{line.frameColor}}</h2>
                 <h2>Varient Group is {{line.varientGroup}}</h2>
                 <h2>Material Type is {{line.materialType}}</h2>
+                
                 <h2>RRP is {{line.rrp}}</h2>
                 <h2>RRP Currency is {{line.rrpCurrency}}</h2>
                 <h2>Frame Colour Description is {{line.frameColourDescription}}</h2>
                 <h2>Frame Size is {{line.frameSize}}</h2>
+                <img src="{{'data:image/png;base64,' + line.base64Emb}}" />
+                <!--<img src={{temp}} alt="Red dot" />-->
+
             </div>
         </div>
     </div>
